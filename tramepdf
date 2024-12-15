@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès Restreint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 100px auto;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            outline: none;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function verifyPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = 'Yonbi'; // Change this to your desired password
+
+            if (password === correctPassword) {
+                document.getElementById('access-page').classList.remove('hidden');
+                document.getElementById('password-page').classList.add('hidden');
+            } else {
+                alert('Mot de passe incorrect.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="password-page" class="container">
+        <p>
+            Dans le silence des ténèbres, je suis le quatrième,<br>
+            Mon nom résonne dans les légendes, marqué de l'ombre.<br>
+            Un corps de fureur et de feu, aux puissantes griffes,<br>
+            Ma colère brûle, mon regard fend les cieux.<br>
+            Je suis une bête, mais aussi un symbole,<br>
+            Celui d'un pouvoir que seuls les courageux affrontent.<br>
+            Qui suis-je ?
+        </p>
+        <input type="password" id="password" placeholder="Entrez le mot de passe">
+        <button onclick="verifyPassword()">Accéder</button>
+    </div>
+
+    <div id="access-page" class="container hidden">
+        <p>
+            Mes respects à vous maître,<br><br>
+            Nous vous adressons nos plus profonds respects et dévouement, honoré maître.<br><br>
+            Comme vous nous l'aviez ordonné, nous avons traqué sans relâche le fameux Terumi. Notre mission n’a pas été facile, car il a tout d'abord résisté à nos interrogations, mais ne craignant ni la douleur ni les conséquences de son silence, nous avons pris les mesures nécessaires. Après plusieurs heures d'intenses interrogatoires, au cours desquels il a succombé aux tourments que nous lui avons infligés, Rin a enfin cédé et nous a révélé des informations cruciales.<br>
+            Il a parlé, dans un souffle tremblant, d'une île perdue au milieu d’aucune carte connue. Une île, selon lui, où se trouve la légendaire Pierre de Feu, un artefact de grande puissance. Ce trésor, dit-il, n’est pas donné à n’importe qui. En effet, il nous a expliqué que seuls les dignes héritiers du clan Terumi, ceux qui auraient prouvé leur valeur à travers de terribles épreuves, pourraient en ressortir vivants avec la Pierre de Feu. Ces épreuves, bien que vagues dans ses révélations, semblent exiger plus qu’une simple force physique : elles testent, selon lui, le cœur, l’esprit et l'âme des participants.<br>
+            Rin ne nous a pas communiqué l’emplacement exact de cette île mystérieuse, affirmant que celui-ci était connu uniquement des plus anciens membres du clan Terumi et transmis de génération en génération. Toutefois, il nous a confié qu’il existe un code ancien, un savoir perdu dans les arcanes de notre histoire, qui pourrait nous guider vers ce lieu. Nous avons d'ores et déjà commencé à explorer ce monde si vaste pour tenter d’obtenir des informations plus concrètes sur l'emplacement de cette île.<br>
+            Nous avons l'intime conviction que ce chemin vous mènera à un pouvoir incomparable, la Pierre de Feu pourrait être la clé de notre grandeur, et nul ne doute qu'avec elle, vous pourrez enfin affronter cette fameuse bête et enfin tirer partie de son pouvoir.<br><br>
+            Longue vie à vous, maître, et que notre loyauté à votre cause ne faiblisse jamais.<br><br>
+            Vos fidèles serviteurs.
+        </p>
+    </div>
+</body>
+</html>
